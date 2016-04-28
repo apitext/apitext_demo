@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="apitext : An API that has an appetite for TEI-XML Transcriptions">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>apitext</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title"><img src="images/logo_apitext_arrow.png"/>apitext</h1>
+          <h2 id="project_tagline">An API that has an appetite for TEI-XML Transcriptions</h2>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>what is apitext?</h3>
+
+<p>Apitext is a prototype RESTful Application Programing Interface (API) for TEI-XML Transcriptions. Once installed on your website, it It exposes a series of Uniform Resource Identifiers (URI). By using these identifier endpoints, a user can retrieve specific information from a TEI-XML file. Currently, our experimental student built prototype can only manage one TEI-XML file at a time and only supports URI requests from the same domain as the API itself. Future iterations of the prototype intend to address these functionality challenges.</p>
+
+<p>It's probably easier to show you what our API does, rather than tell you about it. Check out a live demonstration of apitext <a href="">here</a>.</p>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>how do I install apitext?</h3>
+
+<ol>
+	<li>You need to have a website capable of running PHP scripts.</li>
+	<li>In order for apitext to work, you will need to designate a folder on your website that will hold your TEI-XML file.</li>
+	<li>You will need to install apitext into that TEI-XML folder.</li>
+	<ul>
+		<li>If you are familiar with Github, you can clone the apitext repository <a href="https://github.com/apitext/apitext_api">here</a>.</li>
+		<li>You can also download a zipped version of the repository <a href="https://github.com/apitext/apitext_api/archive/master.zip">here</a>.</li>
+		<ul>
+			<li>Please note, if you choose this option, you will need to open the folder inside the newly unzipped folder and change that folder name from [apitext_api-master] to [apitext_api].</li>
+			<li>You will then need to move that folder into your TEI-XML folder.</li>
+		</ul>
+		<li>When finished your TEI-XML directory should look like this: [illustration]</li>
+	</ul>
+	<li>You will then need to move the [.htaccess] file from the [apitext_api] folder to [your TEI-XML] directory.</li>
+	You will then need to edit the [config.json] file located inside the [apitext_api] folder.
+	In the [teiFolder] entry put the name of your TEI-XML folder.
+	In the [teiFile] entry put the name of your TEI-XML file.
+	If your folder was named [my-tei-folder] and your file was named [my-tei-xml-file.xml], then your [config.json] file would look like this: [illustration]
+	<li>That's it, the API should now be controlling your TEI-XML folder. Use a web browser to navigate to your file folder, you should see a welcome message.</li>
+</ol>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>what is an API?</h3>
+
+<p>Ut ultricies felis nulla, semper consequat lacus tristique vel. Donec tincidunt eleifend dolor eu laoreet. Maecenas at velit sed augue dignissim elementum vitae quis felis. Aenean pulvinar dui in ex vulputate ornare. Curabitur ac luctus mi. Donec congue quam arcu, ac molestie lacus aliquet aliquet. Fusce vitae elementum justo. Praesent rutrum ultricies nunc, sit amet efficitur lorem dictum vitae. Aliquam augue orci, pulvinar vitae tempor a, suscipit quis erat. Etiam varius quam vel accumsan elementum. Maecenas eget sodales justo.</p>
+
+<h3><a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>what is REST?</h3>
+
+<p>Ut ultricies felis nulla, semper consequat lacus tristique vel. Donec tincidunt eleifend dolor eu laoreet. Maecenas at velit sed augue dignissim elementum vitae quis felis. Aenean pulvinar dui in ex vulputate ornare. Curabitur ac luctus mi. Donec congue quam arcu, ac molestie lacus aliquet aliquet. Fusce vitae elementum justo. Praesent rutrum ultricies nunc, sit amet efficitur lorem dictum vitae. Aliquam augue orci, pulvinar vitae tempor a, suscipit quis erat. Etiam varius quam vel accumsan elementum. Maecenas eget sodales justo.</p>
+
+</section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+  <footer class="inner">
+	<p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+  </footer>
+</div>
+
+    
+
+  </body>
+</html>
