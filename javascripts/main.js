@@ -1,1 +1,1 @@
-console.log('This would be the main JS file.');
+console.log('I don\'t currently need this file. I may turn it into a PHP file.');
