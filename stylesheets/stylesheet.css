@@ -287,10 +287,13 @@ Full-Width Styles
   background: #212121;
 }
 
-#text_box {
+#instructions {
+  color: #fff;
+}
+
+#text_box, #instructions {
   margin: auto;
   text-align: center;
   width: 400px;
-  border: 3px solid #ffcc66;
   padding: 15px;
 }
