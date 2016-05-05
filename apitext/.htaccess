@@ -1,0 +1,8 @@
+Options +FollowSymLinks +ExecCGI
+
+Alias api/v1/resources apitext_api/router.php?parent=resources
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule (.*)  apitext_api/router.php [QSA]
+</IfModule>
