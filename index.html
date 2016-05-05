@@ -33,14 +33,10 @@
 
     <!-- TEXT BOX -->
     <div id="text_box">
-      <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-        <font color="black">Paste your TEI-XML contents in the box below:</font>
-        <textarea name="text" cols="150" rows="10">
-        <?php
-
-        ?>
-        </textarea>
-        <br>
+      <font color="white">Paste your TEI-XML contents in the box below:</font>
+      <br>
+      <form action="" method="POST">
+        <textarea type="text" cols="150" rows="20%" value="Paste your copied XML text here..." class="text_box" name="xml_text"></textarea>
         <input type="submit" value="Submit" name="xml_submit">
       </form>
     </div>
