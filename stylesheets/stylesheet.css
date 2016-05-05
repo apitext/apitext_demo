@@ -289,11 +289,19 @@ Full-Width Styles
 
 #instructions {
   color: #fff;
-}
-
-#text_box, #instructions {
   margin: auto;
   text-align: center;
-  width: 400px;
-  padding: 15px;
+  width: 1150px;
+  padding: 5px;
+}
+
+#text_box {
+  margin: auto;
+  text-align: center;
+  width: 1150px;
+  padding: 5px;
+}
+
+textarea {
+  resize: vertical;
 }
