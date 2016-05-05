@@ -1,4 +1,4 @@
-
+<!DOCTYPE HTML>
 <html>
 
   <head>
@@ -13,15 +13,34 @@
 
   <body>
 
-    <!--PHP functions-->
-    <?php
-      
-      function write_to_xml() {
-        $file = "tei_xml_file.xml";
-        file_put_contents('tei_xml_file.xml', $_POST['text']);
-      }
+    <!-- SCRIPTS -->
+    <script>
+      function saveTextAsFile() {
+        var textToWrite = document.getElementById("text_area").value;
+        var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+        var fileNameToSaveAs = "tei_xml_file.xml";
+        console.log(textToWrite);
 
-    ?>
+        var downloadLink = document.createElement("a");
+        downloadLink.download = fileNameToSaveAs;
+        downloadLink.innerHTML = "Download File";
+        if (window.webkitURL != null) {
+            // Chrome allows the link to be clicked
+            // without actually adding it to the DOM.
+            downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+        }
+        else {
+            // Firefox requires the link to be added to the DOM
+            // before it can be clicked.
+            downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+            downloadLink.onclick = destroyClickedElement;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+        }
+
+        downloadLink.click();
+      }
+    </script>
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
@@ -33,10 +52,10 @@
 
     <!-- TEXT BOX -->
     <div id="text_box">
-      <font color="white">Paste your TEI-XML contents in the box below:</font>
-      <br>
-      <form action="" method="POST">
-        <textarea type="text" cols="150" rows="20%" value="Paste your copied XML text here..." class="text_box" name="xml_text"></textarea>
+      <form onSubmit="return saveTextAsFile()">
+        <font color="black">Paste your TEI-XML contents in the box below:</font>
+        <textarea id="text_area" cols="150" rows="10"></textarea>
+        <br>
         <input type="submit" value="Submit" name="xml_submit">
       </form>
     </div>

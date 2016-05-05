@@ -13,16 +13,6 @@
 
   <body>
 
-    <!--PHP functions-->
-    <?php
-      
-      function write_to_xml() {
-        $file = "tei_xml_file.xml";
-        file_put_contents('tei_xml_file.xml', $_POST['text']);
-      }
-
-    ?>
-
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
       <header class="inner">
@@ -35,11 +25,7 @@
     <div id="text_box">
       <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
         <font color="black">Paste your TEI-XML contents in the box below:</font>
-        <textarea name="text" cols="150" rows="10">
-        <?php
-
-        ?>
-        </textarea>
+        <textarea name="text" cols="150" rows="10"></textarea>
         <br>
         <input type="submit" value="Submit" name="xml_submit">
       </form>
