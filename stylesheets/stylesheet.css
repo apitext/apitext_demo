@@ -93,7 +93,11 @@ h6 {
 }
 
 p {
-  margin: 10px 0 15px 0;
+  padding-top: 15px;
+  margin: auto;
+  text-align: center;  
+  color: #fff;
+  font-size: 25px;
 }
 
 footer p {
@@ -306,3 +310,13 @@ textarea {
   resize: vertical;
 }
 
+#view_xml {
+  background: #fff;
+  width: 59%;
+  margin: 0 auto;
+}
+
+#iframe_box {
+  color: #fff;
+  margin: 0 auto;
+}

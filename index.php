@@ -23,11 +23,12 @@
 
     <!-- TEXT BOX -->
     <div id="text_box">
-      <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+	<form action="write_file.php" method="post">
         <font color="black">Paste your TEI-XML contents in the box below:</font>
-        <textarea name="text" cols="150" rows="10"></textarea>
+        <textarea type="text" name="field1" cols="150" rows="10"></textarea>
+	
         <br>
-        <input type="submit" value="Submit" name="xml_submit">
+        <input type="submit" value="submit" name="submit"/>
       </form>
     </div>
 
